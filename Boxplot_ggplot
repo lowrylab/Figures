@@ -2,7 +2,7 @@
 cbPalette <- c("#E69F00", "#56B4E9")
 ggplot(data6, aes(x=POP, y=Height, fill=Treatment)) + geom_boxplot(outlier.size = 0.7) + scale_fill_manual(values=cbPalette) 
 + facet_grid(.~ECO, scales="free", space="free") + labs(x = "Population", y = "Height (mm)") + theme_classic() 
-+ theme(axis.title.x = element_text(size=16), axis.text.x = element_text(angle = 90, hjust = 1, size=15), axis.title.y = element_text(size=16), axis.text.y = element_text(size=15), legend.text = element_text(size = 15), legend.title = element_text(size=16), strip.text.x = element_text(size = 10))
++ theme(axis.title.x = element_text(size=16), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1, size=15), axis.title.y = element_text(size=16), axis.text.y = element_text(size=15), legend.text = element_text(size = 15), legend.title = element_text(size=16), strip.text.x = element_text(size = 10))
 
 #Saving the boxplot to pdf
 ggsave("boxplot_height2.pdf", plot = last_plot(), device = "pdf", path = NULL,
